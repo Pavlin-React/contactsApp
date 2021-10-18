@@ -1,13 +1,10 @@
-import React from 'react';
-import {SafeAreaView} from 'react-native';
 import 'react-native-gesture-handler';
-import AppNavContainer from './src/navigations';
+import React from 'react';
+import AppNavContainer from './src/navigations/index';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <AppNavContainer />
-    </SafeAreaView>
+        <AppNavContainer />
   );
 };
 

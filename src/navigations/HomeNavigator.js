@@ -36,7 +36,7 @@ let Settings = () => {
 const HomeNavigator = () => {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name="Contact" component={Contacts} />
+      <HomeStack.Screen name="Contacts" component={Contacts} />
       <HomeStack.Screen name="ContactDetail" component={ContactDetail} />
       <HomeStack.Screen name="CreateContact" component={CreateContact} />
       <HomeStack.Screen name="Settings" component={Settings} />
