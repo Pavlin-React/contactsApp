@@ -1,0 +1,7 @@
+export let CONTACT_LIST = 'Contacts'
+export let CONTACT_DETAIL = 'Contact detail'
+export let CONTACT_CONTACT = 'Contact Contact'
+export let SETTINGS = 'Settings'
+export let LOGIN= 'Login'
+export let REGISTER = 'Register'
+export let HOME_NAVIGATOR = 'Home'
