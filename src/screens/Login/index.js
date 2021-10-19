@@ -2,12 +2,12 @@ import React from 'react';
 import {View, Text} from 'react-native';
 
 
-let CreateContact = () => {
+let Login = () => {
   return(
     <View>
-      <Text>CreateContact</Text>
+      <Text>Login</Text>
     </View>
   )
 }
 
-export default CreateContact
+export default Login

@@ -9,7 +9,7 @@ let HomeStack = createNativeStackNavigator();
 
 const HomeNavigator = () => {
   return (
-    <HomeStack.Navigator initialRouteName='HOME_NAVIGATOR' >
+    <HomeStack.Navigator>
       <HomeStack.Screen name="CONTACT_LIST" component={Contacts} />
       <HomeStack.Screen name="ContactDetail" component={ContactDetails} />
       <HomeStack.Screen name="CREATE_CONTACT" component={CreateContact} />
