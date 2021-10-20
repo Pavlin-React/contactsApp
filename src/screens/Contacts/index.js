@@ -1,12 +1,13 @@
 import React from 'react';
 import {View, Text} from 'react-native';
+import Container from '../../components/common/Container';
 
 
 let Contacts = () => {
   return(
-    <View>
-      <Text>Contacts</Text>
-    </View>
+    <Container>
+      <Text>Hi from Contacts</Text>
+    </Container>
   )
 }
 
