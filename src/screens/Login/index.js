@@ -1,28 +1,46 @@
 import React, {useState} from 'react';
 import {TextInput, Text} from 'react-native';
 import Container from '../../components/common/Container';
+import CustomButton from '../../components/CustomButton';
 import Input from '../../components/input/index';
 
 let Login = () => {
   let [value, onChangeText] = useState('');
+
+  let onPress = () => {};
 
   return (
     <Container>
       <Input
         onChangeText={text => onChangeText(text)}
         value={value}
-        iconPosition='right'
+        iconPosition="right"
         // error={'This field is required'}
-        icon={<Text>HIDE</Text>}
-        label='Username'
+        label="Username"
       />
       <Input
         onChangeText={text => onChangeText(text)}
         value={value}
-        label='Password'
+        label="Password"
         icon={<Text>HIDE</Text>}
-        iconPosition='right'
+        iconPosition="right"
       />
+      <CustomButton
+        title="Submit"
+        loading={true}
+        secondary
+        onPress
+      />
+      <CustomButton title="Click Me" loading secondary onPress />
+      <CustomButton
+        title="Submit"
+        loading={true}
+        disabled={true}
+        primary
+        onPress
+      />
+
+      <CustomButton title="Submit" danger onPress />
     </Container>
   );
 };
