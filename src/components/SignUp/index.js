@@ -6,7 +6,7 @@ import Input from '../../components/input/index';
 import styles from './styles';
 import {useNavigation} from '@react-navigation/native';
 
-let RegisterComponent = () => {
+let RegisterComponent = ({onChange, onSubmit, errors, form}) => {
   let {navigate} = useNavigation();
   return (
     <Container>
@@ -23,36 +23,52 @@ let RegisterComponent = () => {
         <View style={styles.form}>
           <Input
             placeholder="Enter your Username"
-            label="Password"
-            secureTextEntry
+            label="Username"
             iconPosition="right"
+            error={errors.userName}
+            onChangeText={value => {
+              onChange({name: 'userName', value});
+            }}
           />
           <Input
             iconPosition="right"
-            // error={'This field is required'}
+            error={errors.firstName}
             label="First Name"
             placeholder="Enter your First Name"
+            onChangeText={value => {
+              onChange({name: 'firstName', value});
+            }}
+            error={errors.firstName}
           />
           <Input
             iconPosition="right"
-            // error={'This field is required'}
+            error={errors.lastName}
             label="Last Name"
             placeholder="Enter your Last Name"
+            onChangeText={value => {
+              onChange({name: 'lastName', value});
+            }}
           />
           <Input
             iconPosition="right"
-            // error={'This field is required'}
+            error={errors.email}
             label="Email"
             placeholder="Enter your Email"
+            onChangeText={value => {
+              onChange({name: 'email', value});
+            }}
           />
           <Input
             iconPosition="right"
             icon={<Text>SHOW</Text>}
-            // error={'This field is required'}
+            error={errors.password}
             label="Password"
             placeholder="Enter your Password"
+            onChangeText={value => {
+              onChange({name: 'password', value});
+            }}
           />
-          <CustomButton title="Submit" primary />
+          <CustomButton  onPress={onSubmit} title="Submit" primary />
           <View style={styles.createSection}>
             <Text style={styles.infoText}>Already have an account ?</Text>
             <TouchableOpacity
