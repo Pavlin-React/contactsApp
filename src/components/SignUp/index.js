@@ -62,6 +62,7 @@ let RegisterComponent = ({onChange, onSubmit, errors, form}) => {
             iconPosition="right"
             icon={<Text>SHOW</Text>}
             error={errors.password}
+            secureTextEntry
             label="Password"
             placeholder="Enter your Password"
             onChangeText={value => {

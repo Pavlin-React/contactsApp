@@ -32,7 +32,7 @@ let Index = () => {
             placeholder="Enter your password"
             label="Password"
             icon={<Text>SHOW</Text>}
-            secureTextEntry
+            secureTextEntry={true}
             iconPosition="right"
           />
           <CustomButton title="Submit" primary />
